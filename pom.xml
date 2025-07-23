@@ -5,6 +5,13 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>17</maven.compiler.release>
+    <junit-jupiter.groupId>org.junit.jupiter</junit-jupiter.groupId>
+    <junit-jupiter.artifactId>junit-jupiter</junit-jupiter.artifactId>
+    <junit-jupiter.version>5.11.4</junit-jupiter.version>
+  </properties>
   
   <dependencies>
 	<dependency>
@@ -32,6 +39,24 @@
 	    <groupId>jstl</groupId>
 	    <artifactId>jstl</artifactId>
 	    <version>1.2</version>
+	</dependency>
+	
+	<dependency>
+        <groupId>${junit-jupiter.groupId}</groupId>
+        <artifactId>${junit-jupiter.artifactId}</artifactId>
+        <version>${junit-jupiter.version}</version>
+        <scope>test</scope>
+      </dependency>
+    <dependency>
+	    <groupId>org.json</groupId>
+	    <artifactId>json</artifactId>
+	    <version>20210307</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.mockito</groupId>
+	    <artifactId>mockito-core</artifactId>
+	    <version>5.11.0</version>
+	    <scope>test</scope>
 	</dependency>
 	
 		
