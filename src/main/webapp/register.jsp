@@ -13,7 +13,6 @@
             <option>Hindi</option>
             <option>English</option>
             <option>French</option>
-            <option>Mandarin</option>
         </select> <br/>
         <input type="submit" value="Submit"/>
  
