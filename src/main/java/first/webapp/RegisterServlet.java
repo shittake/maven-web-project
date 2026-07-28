@@ -3,6 +3,7 @@ package first.webapp;
 import java.io.IOException;
 
 
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -43,7 +44,7 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		
 		
 			//code to display text as response
 		 	response.setContentType("text/html");
@@ -58,10 +59,10 @@ public class RegisterServlet extends HttpServlet {
 	        try {
 	            Class.forName("com.mysql.jdbc.Driver");
 	            Connection con = DriverManager.getConnection(
-	                    "jdbc:mysql://localhost:3306/testing", "root", ""); //use drive manager class from the sql connector depedenciy
+	                    "jdbc:mysql://localhost:8081/userdetails", "root", "password"); //use drive manager class from the sql connector depedenciy
 	            								//testing is database name, "root" is default user, "" is blank password
 	            PreparedStatement ps = con
-	                    .prepareStatement("insert into USERDETAILS2 values(?,?,?,?)");
+	                    .prepareStatement("insert into USERDETAILS values(?,?,?,?)");
 	 
 	            ps.setString(1, n);
 	            ps.setString(2, p);
@@ -77,6 +78,7 @@ public class RegisterServlet extends HttpServlet {
 	        }
 	 
 	        out.close();
+	        doGet(request, response);
 		
 	}
 

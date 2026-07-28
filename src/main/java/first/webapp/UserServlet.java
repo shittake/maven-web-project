@@ -27,16 +27,16 @@ public class UserServlet extends HttpServlet {
 	
 	private DatabaseOperations databaseOperations;
 	
-    private String jdbcURL = "jdbc:mysql://localhost:3306/testing";
+    private String jdbcURL = "jdbc:mysql://localhost:8081/userdetails";
     private String jdbcUsername = "root";
-    private String jdbcPassword = "";
+    private String jdbcPassword = "password";
 
-    private static final String INSERT_USERS_SQL = "INSERT INTO userdetails2" + "  (name, password, email, language) VALUES " +
+    private static final String INSERT_USERS_SQL = "INSERT INTO userdetails" + "  (name, password, email, language) VALUES " +
         " (?, ?, ?, ?);";
-    private static final String SELECT_USER_BY_ID = "select name,password,email,language from userdetails2 where name =?";
-    private static final String SELECT_ALL_USERS = "select * from userdetails2";
-    private static final String DELETE_USERS_SQL = "delete from userdetails2 where name = ?;";
-    private static final String UPDATE_USERS_SQL = "update userdetails2 set name = ?,password= ?, email =?,language =? where name = ?;";
+    private static final String SELECT_USER_BY_ID = "select name,password,email,language from userdetails where name =?";
+    private static final String SELECT_ALL_USERS = "select * from userdetails";
+    private static final String DELETE_USERS_SQL = "delete from userdetails where name = ?;";
+    private static final String UPDATE_USERS_SQL = "update userdetails set name = ?,password= ?, email =?,language =? where name = ?;";
 
 	
     protected Connection getConnection() {
@@ -70,7 +70,7 @@ public class UserServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		
 		String action = request.getServletPath();
