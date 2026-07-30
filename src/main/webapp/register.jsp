@@ -15,6 +15,7 @@
             <option>French</option>
             <option>Mandarin</option>
             <option>Japanese</option>
+            <option>French</option>
         </select> <br/>
         <input type="submit" value="Submit"/>
  
